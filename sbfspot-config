@@ -2393,18 +2393,18 @@ do_preflightcheck()
 	fi
 
 	# Check if running on Raspberry Pi
-	if is_pi; then
-		echo "Running on $(tr -d '\0' </proc/device-tree/model)"
-	else
-		echo "Error: Not running on Raspberry Pi."
-		exit 1
-	fi
+#	if is_pi; then
+#		echo "Running on $(tr -d '\0' </proc/device-tree/model)"
+#	else
+#		echo "Error: Not running on Raspberry Pi."
+#		exit 1
+#	fi
 
 	# Check if running Raspbian
-	if [ $(lsb_release -si) != "Raspbian" ]; then
-		echo "Error: Not running Raspbian."
-		exit 1
-	fi
+#	if [ $(lsb_release -si) != "Raspbian" ]; then
+#		echo "Error: Not running Raspbian."
+#		exit 1
+#	fi
 
 	# Check if required files exist
 	wget --spider -q "$url_mylocation/tzlatlon"
